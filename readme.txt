@@ -12,12 +12,14 @@ Hyak files:
 ppie_solver4_generatecommandsforhyak.c
 Makefile
 
+Hyak is the University of Washington's computing cluster and is only available to researchers at the university. The files are nonetheless included for completeness and so that they may be adapted for use on other computing clusters.
+
 
 To compile, gsl v1.15 or greater is needed. Compile using command
 
 gcc ppie_solver4b.c -o ppie_solver4 -lgsl -lgslcblas -lm
 
-On hyak (University of Washington's computing cluster), compile the file by running the Makefile.
+On hyak, compile the file by running the Makefile. Compilation on hyak used the intel c complier.
 
 The program is set up to take in, in order, the stim variance (sigstim), upstream variance (sigin), downstream variance (sigout), upstream correlation coeff (vin) , downstream correlation coeff (vout), kappa, an integer seed that is passed to the random number generator, and a 0 or 1 to use an ON-ON initial guess (0) or an ON-OFF initial guess (1).
 
